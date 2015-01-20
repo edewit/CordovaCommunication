@@ -47,7 +47,7 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <feature name="Hello">
-      <param name="android-package" value="com.example.plugin.Hello" />
+    <feature name="JSInterface">
+      <param name="android-package" value="org.jboss.aerogear.cordova.hybrid.JSInterface" />
     </feature>
 </widget>

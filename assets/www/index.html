@@ -22,18 +22,13 @@
     <script src="cordova.js"></script>
     <script>
       function callTimer() {
-        return new Date().toLocaleTimeString();
+        alert(new Date().toLocaleTimeString());
       }
 
       document.addEventListener("deviceready", function() {
-        var win = function (result) {
-              alert(eval(result.message));
-            },
-            fail = function (error) {
-              alert("ERROR " + error);
-            };
-
-        hello.greet("test", win, fail);
+        jsInterface.init(function (result) {
+          eval(result);
+        });
       }, false);
     </script>
   </head>

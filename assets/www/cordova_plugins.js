@@ -1,17 +1,17 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/com.example.hello/www/hello.js",
-        "id": "com.example.hello.hello",
+        "file": "plugins/org.jboss.aerogear.cordova.hybrid/www/jsInterface.js",
+        "id": "org.jboss.aerogear.cordova.hybrid",
         "clobbers": [
-            "hello"
+            "jsInterface"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.example.hello": "0.6.0"
+    "org.jboss.aerogear.cordova.hybrid": "0.0.1"
 }
 // BOTTOM OF METADATA
 });

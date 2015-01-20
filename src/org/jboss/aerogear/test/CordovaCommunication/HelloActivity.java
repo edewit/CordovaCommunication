@@ -4,10 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import com.example.plugin.Hello;
+import org.jboss.aerogear.cordova.hybrid.JSInterface;
 import org.apache.cordova.*;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -34,12 +33,7 @@ public class HelloActivity extends Activity implements CordovaInterface {
   }
 
   public void callJs(View view) throws JSONException {
-    final JSONObject json = new JSONObject();
-    json.put("message", "callTimer()");
-    PluginResult result = new PluginResult(PluginResult.Status.OK, json);
-    result.setKeepCallback(true);
-
-    Hello.context.sendPluginResult(result);
+    JSInterface.callJS("callTimer()");
   }
   /**
    * Called when an activity you launched exits, giving you the requestCode you started it with,
